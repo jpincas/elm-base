@@ -1,6 +1,9 @@
-FROM node
+FROM debian:jessie
 
-RUN npm install -g elm
+RUN apt-get update -y
+RUN apt-get install nodejs-legacy -y
+RUN apt-get install npm -y
+RUN npm install -g elm@0.18.0
 
 WORKDIR /home/docker/workspace
 
