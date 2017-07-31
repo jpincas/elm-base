@@ -4,6 +4,7 @@ RUN apt-get update -y
 RUN apt-get install nodejs-legacy -y
 RUN apt-get install npm -y
 RUN npm install -g elm@0.18.0
+RUN npm install -g webpack webpack-dev-server
 
 WORKDIR /home/docker/workspace
 
